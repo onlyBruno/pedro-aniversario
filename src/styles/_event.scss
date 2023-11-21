@@ -1,0 +1,66 @@
+@use 'variables';
+
+.event {
+    padding: 80px 0;
+
+    &--tematica {
+        background-image: linear-gradient(#87CEEB, #1E90FF); // Altere para a cor desejada
+    }
+
+    &--musica {
+        background-image: linear-gradient(#1E90FF, #228B22); // Altere para a cor desejada
+    }
+
+    &--comida-bebida {
+        background-image: linear-gradient(#228B22, #ADFF2F); // Altere para a cor desejada
+    }
+
+    &--surpresas {
+        background-image: linear-gradient(#ADFF2F, #87CEEB); // Altere para a cor desejada
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__image {
+        max-width: 360px;
+    }
+
+    &__details {
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: variables.$textColor; // Adicione a cor do texto
+        }
+
+        &__description {
+            font-size: 16px;
+            line-height: 22px;
+            color: variables.$textColor; // Adicione a cor do texto
+        }
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__details {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+    }
+}
